@@ -19,7 +19,7 @@ Exercise['creation_date'] = Exercise['creation_date'].apply(
 
 Exercise['PreworkoutPeriodBegin'] = Exercise['start_date'] - pd.Timedelta("2 hours")
 Exercise['PostworkoutPeriodEnd'] = Exercise['start_date'] + pd.Timedelta("4 hours")
-print(Exercise.head())
+# print(Exercise.head())
 # print(Dexcom.head())
 # print(Omnipod.head())
 # print(Exercise.head())
@@ -35,3 +35,6 @@ Combined_Dex = pd.merge_asof(Dexcom, Exercise, left_on='event_time', right_on='s
                                                                                                               axis=1)
 
 
+test_pivot = Omnipod_bg.pivot(index=['Date', 'Time'], columns='Type', values='Value')
+
+print(test_pivot.head())

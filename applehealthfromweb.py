@@ -112,7 +112,6 @@ def encode(s):
     return s.encode('UTF-8') if sys.version_info.major < 3 else s
 
 
-
 class HealthDataExtractor(object):
     """
     Extract health data from Apple Health App's XML export, export.xml.
