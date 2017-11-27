@@ -6,6 +6,7 @@ import time
 # Insulin on board (IOB) information is only contained within a comment string and must be extracted.
 Meal_IOB = re.compile(r"""Meal IOB: \d{1,2}(\.\d{1,2})""")
 Correction_IOB = re.compile(r"""Correction IOB: \d{1,2}(\.\d{1,2})""")
+Override = "Override."
 
 
 class DiabetesData(object):
